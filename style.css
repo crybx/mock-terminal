@@ -1,0 +1,62 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: content-box;
+}
+body {
+  color: black;
+  background: #074473;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  box-shadow: 10px 10px #FF0094;
+  width: 30vw;
+  height: 30vh;
+  padding: 5vw;
+  background: #00FFA9;
+  display: flex;
+  flex-direction: column;
+  vertical-align: center;
+}
+.output p {
+  position: relative;
+  white-space: nowrap;
+}
+.input,
+.pad {
+  font-weight: bold;
+  white-space: normal;
+  word-wrap: break-word;
+}
+.cursor-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+cursor {
+  display: inline;
+  background: white;
+  animation: blink 1.5s linear infinite;
+}
+@keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
