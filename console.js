@@ -24,10 +24,10 @@ $(document).ready(function() {
 
 function ConParse() {
   this.history = [];
-  this.prefix = 'crybot@replit$ ';
+  this.prefix = 'you@BOT-PC$ ';
   this.buffer = '';
   this.cursorLocation = 0;
-  this.input('test');
+  this.input('yes');
 
   $('.prefix').text(this.prefix);
 }
@@ -47,13 +47,13 @@ ConParse.prototype.navigate = function(left) {
 };
 
 ConParse.prototype.renderCursor = function() {
-  var pad = Array(this.cursorLocation + this.prefix.length);
+  var pad = Array(this.cursorLocation + this.prefix.length - 1);
   pad.fill('&nbsp;');
   $('.cursor-container .pad').html(pad.join(''));
 };
 
 ConParse.prototype.clear = function() {
-  this.cursorLocation = 0;
+  this.cursorLocation = -1;
   this.buffer = '';
   $('#buffer').text(this.buffer);
   this.renderCursor();
