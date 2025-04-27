@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 function ConParse() {
   this.history = [];
-  this.prefix = 'you@BOT-PC$ ';
+  this.prefix = 'you@PC$ ';
   this.buffer = '';
   this.cursorLocation = 0;
   this.input('yes');

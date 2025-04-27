@@ -18,7 +18,8 @@ body {
 }
 .container {
   box-shadow: 10px 10px #FF0094;
-  width: 30vw;
+  width: 40vw;
+  max-width: 600px;
   height: 30vh;
   padding: 5vw;
   background: #00FFA9;
@@ -26,6 +27,19 @@ body {
   flex-direction: column;
   vertical-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 60vw; /* Larger width for smaller screens */
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 30vw; /* Smaller width for larger screens */
+  }
+}
+
 .output p {
   position: relative;
   white-space: nowrap;
